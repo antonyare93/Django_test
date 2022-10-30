@@ -1,0 +1,31 @@
+* {
+    font-family: Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+body {
+    background-color: #262626;
+}
+
+.titulo {
+    padding-left: 3%;
+    padding-top: 1%;
+    color: #d1d1d1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+.card {
+    color: #474747;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.movie-tittle {
+    color: #000;
+    height: 70px;
+}

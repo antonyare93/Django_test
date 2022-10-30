@@ -1,18 +1,29 @@
-<h1>Películas</h1>
+{% load static %}
 
-{% for pelicula in peliculas %}
-
-<div>
-    <div><h2>{{pelicula.titulo}}</h2></div>
-    <div>
-        <div>Director: {{pelicula.director}}</div>
-        <div>Año: {{pelicula.year}}</div>
-        <div>Genero: 
-            {% for genre in pelicula.genero.all %}
-                <span>{{genre.genero}}</span>
-            {% endfor %}
-        </div>
+<head>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Películas</h1>
     </div>
-</div>
+    <div class="grid">
+        {% for pelicula in peliculas %}
 
-{% endfor %}
+        <div class="card">
+            <div class="movie-tittle"><h2>{{pelicula.titulo}}</h2></div>
+            <div>
+                <div>Director: {{pelicula.director}}</div>
+                <div>Año: {{pelicula.year}}</div>
+                <div>Genero: 
+                    {% for genre in pelicula.genero.all %}
+                        <span>{{genre.genero}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
