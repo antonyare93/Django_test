@@ -1,0 +1,18 @@
+<h1>Películas</h1>
+
+{% for pelicula in peliculas %}
+
+<div>
+    <div><h2>{{pelicula.titulo}}</h2></div>
+    <div>
+        <div>Director: {{pelicula.director}}</div>
+        <div>Año: {{pelicula.year}}</div>
+        <div>Genero: 
+            {% for genre in pelicula.genero.all %}
+                <span>{{genre.genero}}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endfor %}
